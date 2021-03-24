@@ -158,6 +158,7 @@ header .logoMU {
   justify-content: space-between;
   align-items: center;
   position: absolute;
+  display: none;
 }
 
 .login
@@ -172,6 +173,12 @@ header .logoMU {
   margin-right: auto;
 }
 .login form
+{
+  padding-top: 120px;
+  padding-left: 30px;
+}
+
+.login
 {
   padding-top: 120px;
   padding-left: 30px;

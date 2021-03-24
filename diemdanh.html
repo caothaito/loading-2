@@ -50,7 +50,7 @@
         <!-- attendance -->
                 <div class="attendance" id="attendance" >
                     <div class="login">
-                        <form action="">
+                        <!-- <form> -->
                             <div class="form-group">
                               <label class="tennv" for="exampleInputEmail1"></label>
                               <input class="inputName" type="email" id="exampleInputEmail1" aria-describedby="emailHelp">
@@ -66,15 +66,15 @@
                                 <button class="mg"></button>
                                 <button class="dl"></button>
                             </div>
-                            <button onclick="register()" class="btn"></button>
-                          </form>
+                            <button onclick="register(event)" class="btn"></button>
+                          <!-- </form> -->
                     </div>
                  </div>
 
                  <div class="success" id="success" style="display: none;">
                      <div class="receive">
                         <div class="congratulations"></div>
-                        <button type="submit" class="buttonOk"></button>
+                        <button class="buttonOk" id="notifyOk" onclick="hideNotify()"></button>
                      </div>
                  </div>
 

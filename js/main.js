@@ -8,11 +8,15 @@ $('#cumsv').click(function() {
     $('#server').toggle('slow');
 });
 
-function register(){
-    console.log("click register")
-    $("#success").modal();
+function register(e){
+    $('#attendance').toggle('slow');
+    $("#success").toggle('slow');
 }
-
+function hideNotify() {
+    $("#success").toggle('slow');
+    $('#cumsv').show();
+    $('#server').show();
+}
 
 $(document).ready(function() {
 
