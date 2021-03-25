@@ -41,10 +41,10 @@ header .logoMU {
 .overlay {
   z-index: 200;
   position: absolute;
-  top: 0;
+  top: 200px;
   left: 0;
   width: 100%;
-  padding: 60px 100px;
+  /* padding: 60px 100px; */
   justify-content: space-between;
   align-items: center;
 }
@@ -52,8 +52,10 @@ header .logoMU {
 .listBook {
   background: url(../images/bookUpdate.png);
   background-size: cover;
-  width: 80%;
-  height: 73vh;
+  /* width: 80%;
+  height: 73vh; */
+  width: 960px;
+  height: 540px;
   background-position: center;
   z-index: 20;
   margin-left: auto;
@@ -61,17 +63,56 @@ header .logoMU {
 }
 
 .listName {
-  position: absolute;
-  padding: 150px 100px;
+  position: relative;
+  /* padding: 150px 100px; */
   z-index: 1000;
-  justify-content: space-between;
+  /* justify-content: space-between;
   align-items: center;
   display: flex;
   margin-left: 150px;
-  margin-top: 120px;
+  margin-top: 120px; */
+}
+.list-item {
+  position: absolute;
 }
 
+.pos-row-1 {
+  top: 200px;
+}
+.pos-row-2 {
+  top: 240px;
+  
+}
+.pos-row-3 {
+  top: 280px;
+  
+}
+.pos-row-4 {
+  top: 320px;
+  
+}
+.pos-row-5 {
+  top: 360px;
+  
+}
 
+/* page 1 */
+.pos-col-1 {
+  left: 150px;
+
+}
+.pos-col-2 {
+  left: 300px;
+}
+
+/* page 2 */
+.pos-col-3 {
+  left: 490px;
+
+}
+.pos-col-4 {
+  left: 640px;
+}
 
 
 /* ========================= */
