@@ -25,7 +25,7 @@ function register(e){
             return;
         } 
 
-        lstNewAcc.push({
+        lstNewAcc.unshift({
             userName: _userName, 
             phone:_phoneNumberr, 
             charClass: registerClass
