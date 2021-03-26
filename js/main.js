@@ -8,6 +8,13 @@ $('#logoRight').click(function() {
     showListName(lstNewAcc);
 });
 
+$('#buttonEsc').click(function() {
+    $('#badBook').toggle('hide');
+
+});
+
+
+
 $('#cumsv').click(function() {
     $('#attendance').toggle('slow');
     $('#server').toggle('slow');
@@ -37,7 +44,6 @@ function register(e){
         $("#txtPhoneNumber").val("");
 
         $("#success").toggle('slow');
-        $("#footerLoading").toggle('slow');
         $('#attendance').toggle('slow');
         $("#cumsv").toggle('hide');
     }
@@ -55,7 +61,6 @@ function choiseClass(cls) {
 
 function hideNotify() {
     $("#success").toggle('slow');
-    $("#footerLoading").toggle('hide');
     $('#cumsv').show();
     $('#server').show();
 }

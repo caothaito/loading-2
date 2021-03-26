@@ -9,34 +9,119 @@ header {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
-  padding: 40px 100px;
-  z-index: 1000;
+  margin-left: 1670px;
+  padding-top: 40px;
+  z-index: 201;
   justify-content: space-between;
   align-items: center;
 }
-.header {
+
+/* ==============fix======== */
+.links
+{
+  position: fixed;
   display: flex;
+    top: 0;
+    right: 0;
+    width: 400px;
+    height: 70px;
+    background: rgba(11,10,13,0);
+    background: -moz-linear-gradient(left, rgba(11, 10, 13, 0) 0%, rgba(11, 10, 13, 0.5) 17%, rgba(11, 10, 13, 0.52) 20%, #0b0a0d 100%);
+    background: -webkit-gradient(left top, right top, color-stop(0%, rgba(11, 10, 13, 0)), color-stop(17%, rgba(11, 10, 13, 0.5)), color-stop(20%, rgba(11, 10, 13, 0.52)), color-stop(100%, #0b0a0d));
+    background: -webkit-linear-gradient(left, rgba(11, 10, 13, 0) 0%, rgba(11, 10, 13, 0.5) 17%, rgba(11, 10, 13, 0.52) 20%, #0b0a0d 100%);
+    background: -o-linear-gradient(left, rgba(11, 10, 13, 0) 0%, rgba(11, 10, 13, 0.5) 17%, rgba(11, 10, 13, 0.52) 20%, #0b0a0d 100%);
+    background: -ms-linear-gradient(left, rgba(11, 10, 13, 0) 0%, rgba(11, 10, 13, 0.5) 17%, rgba(11, 10, 13, 0.52) 20%, #0b0a0d 100%);
+    background: linear-gradient(to right, rgba(11, 10, 13, 0) 0%, rgba(11, 10, 13, 0.5) 17%, rgba(11, 10, 13, 0.52) 20%, #0b0a0d 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#0b0a0d", endColorstr="#0b0a0d", GradientType=1 );
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    padding-top: 10px;
 }
+.links a {
+  width: 50px;
+  height: 50px;
+  background: #2a2528;
+  border-radius: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 0 10px;
+}
+.links a:hover {
+  background: #000;
+}
+.links a:before {
+  content: " ";
+  display: inline-block;
+  position: relative;
+}
+.links a.home:before {
+  width: 26px;
+  height: 21px;
+  background: url(../images/ic-home.png) no-repeat;
+  top: -2px;
+}
+.links a.download:before {
+  width: 20px;
+  height: 20px;
+  background: url(../images/ic-dl.png) no-repeat;
+  top: 0px;
+}
+.links a.forum:before {
+  width: 28px;
+  height: 23px;
+  background: url(../images/ic-fr.png) no-repeat;
+  top: 0px;
+}
+.links a.register:before {
+  width: 24px;
+  height: 23px;
+  background: url(../images/ic-r.png) no-repeat;
+  top: 0px;
+}
+.links a.facebook:before
+{
+  width: 24px;
+  height: 23px;
+  background: url(../images/fb.png) no-repeat;
+  top: 0px;
+}
+
+/* ==============fix======== */
 header .logoMU {
+  margin-left: auto;
   background: url(../images/Logo.png);
-  width: 200px;
-  height: 140px;
+  width: 249px;
+  height: 192px;
   background-size: cover;
   text-transform: uppercase;
   cursor: pointer;
 }
 .book_icon {
+  margin-left: auto;
+  margin-right: auto;
   z-index: 500;
   position: relative;
-  width: 200px;
-  height: 240px;
+  width: 180px;
+  height: 210px;
   background: url(../images/Book_Icon.png);
   background-size: cover;
   background-position: center;
   cursor: pointer;
+  -webkit-animation: mover 3s infinite  alternate;
+  animation: mover 3s infinite  alternate;
 }
 
+@-webkit-keyframes mover {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-20px); }
+}
+@keyframes mover {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-20px); }
+}
 /* ========================danhsach========== */
 .overlay {
   z-index: 200;
@@ -44,16 +129,32 @@ header .logoMU {
   top: 200px;
   left: 0;
   width: 100%;
-  /* padding: 60px 100px; */
   justify-content: space-between;
   align-items: center;
 }
 
+.esc{
+  position: absolute;
+  margin-top: 30px;
+  background: url(../images/esc.png);
+  background-size: cover;
+  height: 29px;
+  width: 50px;
+  margin-left: 785px;
+  margin-right: 128px;
+  cursor: pointer;
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5);
+}
+.esc:hover
+{
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  transform: scale(0.95);
+}
+
 .listBook {
   background: url(../images/bookUpdate.png);
+  margin-bottom: 149px;
   background-size: cover;
-  /* width: 80%;
-  height: 73vh; */
   width: 960px;
   height: 540px;
   background-position: center;
@@ -64,13 +165,7 @@ header .logoMU {
 
 .listName {
   position: relative;
-  /* padding: 150px 100px; */
   z-index: 1000;
-  /* justify-content: space-between;
-  align-items: center;
-  display: flex;
-  margin-left: 150px;
-  margin-top: 120px; */
 }
 .list-item {
   position: absolute;
@@ -119,7 +214,8 @@ header .logoMU {
 .showcase {
   position: absolute;
   right: 0;
-  width: 100%;
+  width: 1920px;
+  height: 1080px;
   min-height: 100vh;
   padding: 100px;
   display: flex;
@@ -137,8 +233,8 @@ header .logoMU {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
+  width: 1920px;
+  height: 1080px;
   object-fit: cover;
   opacity: 0.8;
 }
@@ -151,11 +247,11 @@ header .logoMU {
   background: url(../images/button_mu.jpg);
   background-size: cover;
   background-position: center;
-  width: 130px;
-  height: 30px;
+  width: 170px;
+  height: 40px;
   text-align: center;
   color: #fff;
-  padding-top: 2px;
+  padding-top: 8px;
   cursor: pointer;
   box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5);
   margin-left: auto;
@@ -181,8 +277,8 @@ header .logoMU {
   padding-top: 2px;
   cursor: pointer;
   box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5);
-  margin-right: auto;
-  margin-left: 20px;
+  /* margin-right: auto; */
+  margin-left: auto;
 }
 
  .cumsv:hover {
@@ -348,9 +444,9 @@ header .logoMU {
 {
   top: 45%;
   position: absolute;
-  width: 460px;
-  height: 35px;
-  margin-left: 20px;
+  width: 370px;
+  height: 75px;
+  margin-left: 67px;
   background: url(../images/chucmung.png);
   background-size: cover;
   display: inline-block
@@ -394,8 +490,8 @@ header .logoMU {
   background: url(../images/loading.png);
   background-size: cover;
   background-position: center;
-  width: 47%;
-  height: 160px;
+  width: 38%;
+  height: 141px;
   z-index: 20;
   margin-left: auto;
   margin-right: auto;
@@ -410,7 +506,8 @@ header .logoMU {
   height: 50px;
   z-index: 20;
   margin-left: auto;
-  margin-right: 1000px;
+  margin-right: 975px;
+  margin-top: -33px;
 }
 
 
